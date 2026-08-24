@@ -83,9 +83,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 4. Smooth Anchor Link Handler
+  // 4. Mobile Navigation Drawer
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  const setMobileMenuState = (isOpen) => {
+    if (!mobileMenuToggle || !mobileMenu) return;
+
+    mobileMenu.hidden = !isOpen;
+    mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuToggle.setAttribute("aria-label", isOpen ? "모바일 메뉴 닫기" : "모바일 메뉴 열기");
+    mobileMenuToggle.innerHTML = `<i data-lucide="${isOpen ? "x" : "menu"}" class="w-5 h-5"></i>`;
+
+    if (window.lucide) window.lucide.createIcons();
+  };
+
+  mobileMenuToggle?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setMobileMenuState(mobileMenu?.hidden ?? true);
+  });
+
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMobileMenuState(false));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (window.innerWidth < 768 && navPill && !navPill.contains(event.target)) {
+      setMobileMenuState(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMobileMenuState(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) setMobileMenuState(false);
+  });
+
+  // 5. Smooth Anchor Link Handler
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
+      if (mobileMenu?.contains(this)) setMobileMenuState(false);
       const targetId = this.getAttribute("href");
       if (targetId && targetId !== "#") {
         const targetEl = document.querySelector(targetId);
@@ -100,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 5. Continuous manufacturing process video controller
+  // 6. Continuous manufacturing process video controller
   const processSequenceVideo = document.getElementById("processSequenceVideo");
 
   if (processSequenceVideo) {
@@ -122,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
     keepProcessSequencePlaying();
   }
 
-  // 6. Lenis Smooth Inertia Scroll Initialization (@studio-freight/lenis)
+  // 7. Lenis Smooth Inertia Scroll Initialization (@studio-freight/lenis)
   if (typeof Lenis !== "undefined") {
     const lenis = new Lenis({
       duration: 1.2,
@@ -138,8 +177,8 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(raf);
   }
 
-  // 7. Vanilla-Tilt 3D Perspective Gyro Cards
-  if (typeof VanillaTilt !== "undefined") {
+  // 8. Vanilla-Tilt 3D Perspective Gyro Cards
+  if (typeof VanillaTilt !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
     VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
       max: 8,
       speed: 400,
@@ -149,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 9. Aceternity UI Mouse-Tracking Spotlight Glow Effect
+  // 10. Aceternity UI Mouse-Tracking Spotlight Glow Effect
   document.querySelectorAll(".spotlight-card").forEach((card) => {
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
@@ -160,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 10. Interactive FAQ Accordion (shadcn/ui style)
+  // 11. Interactive FAQ Accordion (shadcn/ui style)
   document.querySelectorAll(".faq-toggle").forEach((toggle) => {
     toggle.addEventListener("click", () => {
       const content = toggle.nextElementSibling;
@@ -178,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 11. Quick Quote Estimation Calculator Modal with Confetti
+  // 12. Quick Quote Estimation Calculator Modal with Confetti
   const modal = document.getElementById("quoteModal");
   const btnOpenModal = document.getElementById("btnOpenModal");
   const btnCloseModal = document.getElementById("btnCloseModal");

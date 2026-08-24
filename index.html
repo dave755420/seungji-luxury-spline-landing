@@ -33,7 +33,7 @@
 <body class="antialiased selection:bg-indigo-600 selection:text-white">
 
   <!-- ==================== 1. FLOATING NAVIGATION BAR ==================== -->
-  <header class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+  <header class="site-header fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
     <nav class="nav-pill pointer-events-auto flex items-center justify-between px-5 py-3 rounded-full w-full max-w-4xl transition-all duration-300">
       <!-- Logo -->
       <a href="#hero" class="flex items-center gap-2.5 text-slate-900 font-extrabold text-sm tracking-tight group">
@@ -57,11 +57,31 @@
       </ul>
 
       <!-- CTA Button -->
-      <div class="flex items-center gap-2">
+      <div class="header-actions flex items-center gap-2">
         <a href="#contact" class="btn-pill-primary text-xs px-4 py-2 rounded-full font-bold transition-transform hover:scale-105 active:scale-95 flex items-center gap-1.5">
           <span>견적 문의</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
+        <button
+          type="button"
+          class="mobile-menu-toggle"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+          aria-label="모바일 메뉴 열기"
+        >
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Compact mobile navigation -->
+      <div id="mobileMenu" class="mobile-menu-panel" hidden>
+        <a href="#why-us" class="mobile-menu-link">기술특장점</a>
+        <a href="#services" class="mobile-menu-link">사업분야</a>
+        <a href="#how-we-work" class="mobile-menu-link">공정 프로세스</a>
+        <a href="#case-study" class="mobile-menu-link">제작사례</a>
+        <a href="#ecosystem" class="mobile-menu-link">설비현황</a>
+        <a href="#reviews" class="mobile-menu-link">고객후기</a>
+        <a href="#contact" class="mobile-menu-cta btn-pill-primary">견적 문의 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
       </div>
     </nav>
   </header>
@@ -72,10 +92,10 @@
     <div class="ambient-glow top-glow"></div>
     <div class="ambient-glow center-glow"></div>
 
-    <div class="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10 w-full">
+    <div class="hero-grid container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10 w-full">
       
       <!-- Left Column: Typography, Copy & CTAs (col-span-6) -->
-      <div class="lg:col-span-6 flex flex-col items-start text-left">
+      <div class="hero-copy lg:col-span-6 flex flex-col items-start text-left">
         
         <!-- Eyebrow Tag -->
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-slate-200 shadow-sm mb-5 backdrop-blur-md">
@@ -98,7 +118,7 @@
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-wrap items-center gap-3.5 mb-8">
+        <div class="hero-actions flex flex-wrap items-center gap-3.5 mb-8">
           <a href="#contact" class="btn-hero-primary px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 shadow-lg transition-all hover:scale-105 active:scale-95">
             <span>무료 제작 상담 시작</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -109,7 +129,7 @@
         </div>
 
         <!-- Hero Quick Trust Metrics Strip -->
-        <div class="flex items-center gap-6 pt-5 border-t border-slate-200/80 text-xs text-slate-500 font-mono">
+        <div class="hero-trust-metrics flex items-center gap-6 pt-5 border-t border-slate-200/80 text-xs text-slate-500 font-mono">
           <div class="flex items-center gap-1.5">
             <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 font-bold"></i>
             <span class="font-bold text-slate-800">0.001mm</span> 공차 정밀도
@@ -127,7 +147,7 @@
       </div>
 
       <!-- Right Column: 100% Visible 3D Spline Robot / Scene (col-span-6) -->
-      <div class="lg:col-span-6 h-[500px] sm:h-[600px] lg:h-[720px] w-full flex items-center justify-center relative pointer-events-auto">
+      <div class="hero-robot lg:col-span-6 h-[500px] sm:h-[600px] lg:h-[720px] w-full flex items-center justify-center relative pointer-events-auto">
         <spline-viewer
           url="https://prod.spline.design/NKlfG2UXRY5aonrp/scene.splinecode"
           class="w-full h-full block transform scale-110 sm:scale-120 transition-transform duration-500"
@@ -182,7 +202,7 @@
       <div class="video-mockup-frame max-w-4xl mx-auto rounded-3xl overflow-hidden border border-slate-200 bg-white p-2.5 relative shadow-2xl">
 
         <!-- Video Header -->
-        <div class="flex items-center justify-between px-3 py-2 bg-slate-900 rounded-t-2xl border-b border-slate-800 text-xs">
+        <div class="video-header flex items-center justify-between px-3 py-2 bg-slate-900 rounded-t-2xl border-b border-slate-800 text-xs">
           <div class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
             <span class="font-mono text-[11px] font-bold text-slate-300 uppercase">SEUNGJI PRECISION PROCESS FILM</span>
@@ -211,17 +231,17 @@
             브라우저에서 영상을 재생할 수 없습니다.
           </video>
 
-          <div class="pointer-events-none absolute inset-x-4 top-4 z-10 flex items-center justify-between text-[10px] font-mono font-bold tracking-widest text-white/80 uppercase">
+          <div class="video-stage-status pointer-events-none absolute inset-x-4 top-4 z-10 flex items-center justify-between text-[10px] font-mono font-bold tracking-widest text-white/80 uppercase">
             <span class="rounded-full border border-white/20 bg-slate-950/45 px-3 py-1.5 backdrop-blur-sm">01 → 02 • Continuous Process</span>
             <span class="rounded-full border border-white/20 bg-slate-950/45 px-3 py-1.5 backdrop-blur-sm">Muted autoplay</span>
           </div>
 
-          <div class="pointer-events-none absolute inset-x-4 bottom-4 z-10 flex items-end justify-between gap-4">
+          <div class="video-stage-caption pointer-events-none absolute inset-x-4 bottom-4 z-10 flex items-end justify-between gap-4">
             <div class="max-w-lg rounded-2xl border border-white/15 bg-slate-950/55 px-4 py-3 text-left text-white shadow-xl backdrop-blur-sm">
               <span class="block text-[10px] font-mono font-bold tracking-widest text-indigo-300 uppercase">Precision Manufacturing Workflow</span>
               <p class="mt-1 text-xs sm:text-sm font-bold leading-relaxed text-white/95">초정밀 가공부터 후속 공정까지 이어진 뒤, SJ 로고 엔드카드로 마무리됩니다.</p>
             </div>
-            <span class="shrink-0 rounded-full border border-emerald-300/30 bg-emerald-300/15 px-3 py-1.5 text-[10px] font-mono font-bold tracking-widest text-emerald-200 uppercase backdrop-blur-sm">Auto loop</span>
+            <span class="video-stage-loop shrink-0 rounded-full border border-emerald-300/30 bg-emerald-300/15 px-3 py-1.5 text-[10px] font-mono font-bold tracking-widest text-emerald-200 uppercase backdrop-blur-sm">Auto loop</span>
           </div>
 
         </div>
