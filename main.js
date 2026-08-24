@@ -83,9 +83,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 4. Smooth Anchor Link Handler
+  // 4. Mobile Navigation Drawer
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  const setMobileMenuState = (isOpen) => {
+    if (!mobileMenuToggle || !mobileMenu) return;
+
+    mobileMenu.hidden = !isOpen;
+    mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuToggle.setAttribute("aria-label", isOpen ? "모바일 메뉴 닫기" : "모바일 메뉴 열기");
+    mobileMenuToggle.innerHTML = `<i data-lucide="${isOpen ? "x" : "menu"}" class="w-5 h-5"></i>`;
+
+    if (window.lucide) window.lucide.createIcons();
+  };
+
+  mobileMenuToggle?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setMobileMenuState(mobileMenu?.hidden ?? true);
+  });
+
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMobileMenuState(false));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (window.innerWidth < 768 && navPill && !navPill.contains(event.target)) {
+      setMobileMenuState(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMobileMenuState(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) setMobileMenuState(false);
+  });
+
+  // 5. Smooth Anchor Link Handler
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
+      if (mobileMenu?.contains(this)) setMobileMenuState(false);
       const targetId = this.getAttribute("href");
       if (targetId && targetId !== "#") {
         const targetEl = document.querySelector(targetId);
@@ -100,185 +139,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 5. 5-Stage Manufacturing Process Video Showcase Controller
-  const STEPS_DATA = [
-    {
-      badge: "STAGE 01 / 05 • 원자재 정밀 선삭",
-      sub: "01. 대형 선반 가공 및 롤 코어 저널 정밀 절삭",
-      text: "최대 8M 대형선반을 활용하여 0.005mm 이내 공차로 롤 바디와 저널부를 1차 정밀 가공합니다.",
-    },
-    {
-      badge: "STAGE 02 / 05 • 고무 및 우레탄 라이닝",
-      sub: "02. 고내마모 특수 우레탄/고무 고압 피복",
-      text: "경도 Shore A 70~95° 균일 가류 공정으로 내마모성 및 내화학성을 극대화합니다.",
-    },
-    {
-      badge: "STAGE 03 / 05 • 경질 크롬 도금 & 슈퍼피니싱",
-      sub: "03. 고경도 크롬 전해도금 및 초정밀 경면 연삭",
-      text: "경도 HV800 이상 크롬층을 형성하고 Ra 0.02µm 이하로 슈퍼피니싱 경면 연마합니다.",
-    },
-    {
-      badge: "STAGE 04 / 05 • 동적 바란싱 & 0.001mm 검사",
-      sub: "04. 고속 회전 다이내믹 밸런스 & 진원도 전수 검사",
-      text: "ISO 1940 G0.4 기준 고속 회전 시 진동을 제로화하고 진원도 공차를 전수 검증합니다.",
-    },
-    {
-      badge: "STAGE 05 / 05 • 산업 라인 장착 & 최종 납품",
-      sub: "05. 광폭 필름/제지/2차전지 라인 장착 및 출고",
-      text: "실제 고속 생산 라인에 최적화하여 24/7 품질 보증과 함께 안전하게 현장 납품합니다.",
-    },
-  ];
+  // 6. Continuous manufacturing process video controller
+  const processSequenceVideo = document.getElementById("processSequenceVideo");
 
-  let currentStep = 0;
-  let isPlaying = true;
-  let stepProgress = 0;
-  const STEP_DURATION = 3800; // ms per step
-  const UPDATE_INTERVAL = 30; // ms
+  if (processSequenceVideo) {
+    processSequenceVideo.muted = true;
+    processSequenceVideo.loop = true;
+    processSequenceVideo.playsInline = true;
 
-  const slides = document.querySelectorAll(".process-slide");
-  const fills = document.querySelectorAll(".segment-fill");
-  const stepPills = document.querySelectorAll(".step-pill");
-  const badgeEl = document.getElementById("processStepBadge");
-  const subEl = document.getElementById("processSubtitle");
-  const headingEl = document.getElementById("processHeading");
-  const playBtn = document.getElementById("videoPlayBtn");
-  const btnPrev = document.getElementById("btnPrevStep");
-  const btnNext = document.getElementById("btnNextStep");
-  const player = document.getElementById("processVideoPlayer");
+    const keepProcessSequencePlaying = () => {
+      if (!processSequenceVideo.paused && !processSequenceVideo.ended) return;
+      const playRequest = processSequenceVideo.play();
+      if (playRequest?.catch) playRequest.catch(() => {});
+    };
 
-  const renderStep = (index) => {
-    currentStep = (index + STEPS_DATA.length) % STEPS_DATA.length;
-    stepProgress = 0;
-
-    // Update Slides
-    slides.forEach((slide, idx) => {
-      if (idx === currentStep) {
-        slide.style.opacity = "1";
-        slide.classList.add("active");
-      } else {
-        slide.style.opacity = "0";
-        slide.classList.remove("active");
-      }
+    processSequenceVideo.addEventListener("loadeddata", keepProcessSequencePlaying);
+    processSequenceVideo.addEventListener("canplay", keepProcessSequencePlaying);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) keepProcessSequencePlaying();
     });
-
-    // Update Progress Bars
-    fills.forEach((fill, idx) => {
-      if (idx < currentStep) {
-        fill.style.width = "100%";
-      } else if (idx === currentStep) {
-        fill.style.width = "0%";
-      } else {
-        fill.style.width = "0%";
-      }
-    });
-
-    // Update Text HUD
-    const data = STEPS_DATA[currentStep];
-    if (badgeEl) badgeEl.textContent = data.badge;
-    if (subEl) subEl.textContent = data.sub;
-    if (headingEl) headingEl.textContent = data.text;
-
-    // Update Pills
-    stepPills.forEach((pill, idx) => {
-      if (idx === currentStep) {
-        pill.className = "step-pill px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold border transition-all active-step-pill bg-indigo-600 text-white border-indigo-400";
-      } else {
-        pill.className = "step-pill px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold border transition-all bg-black/60 text-slate-400 border-white/10 hover:text-white";
-      }
-    });
-  };
-
-  // Video Loop
-  setInterval(() => {
-    if (!isPlaying) return;
-
-    stepProgress += (UPDATE_INTERVAL / STEP_DURATION) * 100;
-    if (fills[currentStep]) {
-      fills[currentStep].style.width = `${Math.min(stepProgress, 100)}%`;
-    }
-
-    if (stepProgress >= 100) {
-      renderStep(currentStep + 1);
-    }
-  }, UPDATE_INTERVAL);
-
-  const togglePlayState = () => {
-    isPlaying = !isPlaying;
-    if (playBtn) {
-      if (isPlaying) {
-        playBtn.innerHTML = '<i data-lucide="pause" class="w-6 h-6 fill-current"></i>';
-      } else {
-        playBtn.innerHTML = '<i data-lucide="play" class="w-6 h-6 fill-current translate-x-0.5"></i>';
-      }
-      if (window.lucide) window.lucide.createIcons();
-    }
-  };
-
-  playBtn?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    togglePlayState();
-  });
-
-  player?.addEventListener("click", (e) => {
-    if (e.target.closest("button") || e.target.closest(".progress-bar-segment")) return;
-    togglePlayState();
-  });
-
-  btnPrev?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    renderStep(currentStep - 1);
-  });
-
-  btnNext?.addEventListener("click", (e) => {
-    e.stopPropagation();
-    renderStep(currentStep + 1);
-  });
-
-  document.querySelectorAll(".progress-bar-segment").forEach((seg) => {
-    seg.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const target = parseInt(seg.getAttribute("data-target"), 10);
-      renderStep(target);
-    });
-  });
-
-  stepPills.forEach((pill) => {
-    pill.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const target = parseInt(pill.getAttribute("data-jump"), 10);
-      renderStep(target);
-    });
-  });
-
-  // 6. Mode Switcher (5-Stage Step Explorer vs '준비 중입니다' Video Placeholder)
-  const btnModeVideo = document.getElementById("btnModeVideo");
-  const btnModeSteps = document.getElementById("btnModeSteps");
-  const btnSwitchToSteps = document.getElementById("btnSwitchToSteps");
-  const realVideoFrame = document.getElementById("realVideoFrame");
-  const processVideoPlayer = document.getElementById("processVideoPlayer");
-
-  const activateStepsMode = () => {
-    btnModeSteps.className = "px-3 py-1 rounded-full text-[10px] font-mono font-bold transition-all bg-indigo-600 text-white shadow-sm flex items-center gap-1";
-    btnModeVideo.className = "px-3 py-1 rounded-full text-[10px] font-mono font-bold transition-all bg-slate-800 text-slate-400 hover:text-white flex items-center gap-1";
-    if (realVideoFrame) realVideoFrame.classList.add("hidden");
-    if (processVideoPlayer) processVideoPlayer.classList.remove("hidden");
-    isPlaying = true;
-    renderStep(currentStep);
-  };
-
-  const activateVideoMode = () => {
-    btnModeVideo.className = "px-3 py-1 rounded-full text-[10px] font-mono font-bold transition-all bg-indigo-600 text-white shadow-sm flex items-center gap-1";
-    btnModeSteps.className = "px-3 py-1 rounded-full text-[10px] font-mono font-bold transition-all bg-slate-800 text-slate-400 hover:text-white flex items-center gap-1";
-    if (realVideoFrame) realVideoFrame.classList.remove("hidden");
-    if (processVideoPlayer) processVideoPlayer.classList.add("hidden");
-    isPlaying = false;
-  };
-
-  btnModeSteps?.addEventListener("click", activateStepsMode);
-  btnModeVideo?.addEventListener("click", activateVideoMode);
-  btnSwitchToSteps?.addEventListener("click", activateStepsMode);
-
-  renderStep(0);
+    keepProcessSequencePlaying();
+  }
 
   // 7. Lenis Smooth Inertia Scroll Initialization (@studio-freight/lenis)
   if (typeof Lenis !== "undefined") {
@@ -297,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 8. Vanilla-Tilt 3D Perspective Gyro Cards
-  if (typeof VanillaTilt !== "undefined") {
+  if (typeof VanillaTilt !== "undefined" && window.matchMedia("(min-width: 768px)").matches) {
     VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
       max: 8,
       speed: 400,
@@ -307,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 9. Aceternity UI Mouse-Tracking Spotlight Glow Effect
+  // 10. Aceternity UI Mouse-Tracking Spotlight Glow Effect
   document.querySelectorAll(".spotlight-card").forEach((card) => {
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
@@ -318,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 10. Interactive FAQ Accordion (shadcn/ui style)
+  // 11. Interactive FAQ Accordion (shadcn/ui style)
   document.querySelectorAll(".faq-toggle").forEach((toggle) => {
     toggle.addEventListener("click", () => {
       const content = toggle.nextElementSibling;
@@ -336,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 11. Quick Quote Estimation Calculator Modal with Confetti
+  // 12. Quick Quote Estimation Calculator Modal with Confetti
   const modal = document.getElementById("quoteModal");
   const btnOpenModal = document.getElementById("btnOpenModal");
   const btnCloseModal = document.getElementById("btnCloseModal");
