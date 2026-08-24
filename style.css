@@ -608,8 +608,9 @@ html.lenis, html.lenis body {
     transform-origin: 50% 48%;
     pointer-events: none;
     opacity: 0.94;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.15) 9%, #000 25%, #000 100%);
-    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.15) 9%, #000 25%, #000 100%);
+    mix-blend-mode: luminosity;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.08) 18%, #000 45%, #000 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.08) 18%, #000 45%, #000 100%);
   }
 
   #hero .bottom-gradient,
