@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>승지정밀산업롤 | 초정밀 산업용 Roll 제작 & 표면처리 기술</title>
+  <meta name="description" content="냉각·히팅·엠보싱 롤 제작, 고무·우레탄 피복 연마, 경질 크롬 도금 Super-Finishing, RTV·테프론 코팅, 분사식 나염기 제작(특허 제0389579호)" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800;900&family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- GitHub Open-Source UI Libraries -->
+  <!-- 1. Lenis Smooth Inertia Scroll (@studio-freight/lenis) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- 2. Vanilla-Tilt 3D Perspective Magnetic Cards -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <!-- 3. Canvas-Confetti Interactive Particles -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  
+  <!-- Spline Viewer Web Component -->
+  <script type="module" src="https://cdn.spline.design/@splinetool/viewer@2.0.5/build/spline-viewer.js"></script>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="antialiased selection:bg-indigo-600 selection:text-white">
+
+  <!-- ==================== 1. FLOATING NAVIGATION BAR ==================== -->
+  <header class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="nav-pill pointer-events-auto flex items-center justify-between px-5 py-3 rounded-full w-full max-w-4xl transition-all duration-300">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2.5 text-slate-900 font-extrabold text-sm tracking-tight group">
+        <div class="w-8 h-8 rounded-full bg-slate-950 flex items-center justify-center font-display font-black text-xs text-white shadow-sm group-hover:scale-105 transition-transform">
+          SJ
+        </div>
+        <div class="flex flex-col">
+          <span class="leading-none text-xs font-black tracking-wider text-slate-900">승지정밀산업롤</span>
+          <span class="text-[9px] text-slate-500 font-mono tracking-widest uppercase">PRECISION ROLL</span>
+        </div>
+      </a>
+
+      <!-- Menu Links -->
+      <ul class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-600">
+        <li><a href="#why-us" class="hover:text-slate-950 transition-colors">기술특장점</a></li>
+        <li><a href="#services" class="hover:text-slate-950 transition-colors">사업분야</a></li>
+        <li><a href="#how-we-work" class="hover:text-slate-950 transition-colors">공정 프로세스</a></li>
+        <li><a href="#case-study" class="hover:text-slate-950 transition-colors">제작사례</a></li>
+        <li><a href="#ecosystem" class="hover:text-slate-950 transition-colors">설비현황</a></li>
+        <li><a href="#reviews" class="hover:text-slate-950 transition-colors">고객후기</a></li>
+      </ul>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="btn-pill-primary text-xs px-4 py-2 rounded-full font-bold transition-transform hover:scale-105 active:scale-95 flex items-center gap-1.5">
+          <span>견적 문의</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== 2. HERO SECTION (SIDE-BY-SIDE: 100% ROBOT VISIBILITY ABOVE THE FOLD) ==================== -->
+  <section id="hero" class="hero-section relative min-h-[100svh] flex items-center justify-center pt-24 pb-8 px-4 sm:px-8 overflow-hidden">
+    <!-- Ambient Light Glows -->
+    <div class="ambient-glow top-glow"></div>
+    <div class="ambient-glow center-glow"></div>
+
+    <div class="container max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10 w-full">
+      
+      <!-- Left Column: Typography, Copy & CTAs (col-span-6) -->
+      <div class="lg:col-span-6 flex flex-col items-start text-left">
+        
+        <!-- Eyebrow Tag -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-slate-200 shadow-sm mb-5 backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
+          <span class="text-[11px] font-bold tracking-wider text-slate-700 uppercase font-mono">
+            Intelligent Precision Roll & Surface Engineering
+          </span>
+        </div>
+
+        <!-- Monumental Headline -->
+        <h1 class="hero-title text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-slate-950 mb-5">
+          Intelligent Engineering <br />
+          <span class="text-gradient">for Modern Precision Roll</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-sm sm:text-base text-slate-600 font-normal leading-relaxed mb-8 max-w-xl">
+          냉각·히팅·엠보싱 특수 롤 제작부터 고무·우레탄 피복, 경질 크롬 도금, 테프론 코팅까지 — 
+          30년 축적된 초정밀 가공 기술로 산업의 회전축을 완성합니다.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-3.5 mb-8">
+          <a href="#contact" class="btn-hero-primary px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 shadow-lg transition-all hover:scale-105 active:scale-95">
+            <span>무료 제작 상담 시작</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#services" class="btn-hero-secondary px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold transition-all hover:bg-slate-100">
+            <span>사업분야 둘러보기</span>
+          </a>
+        </div>
+
+        <!-- Hero Quick Trust Metrics Strip -->
+        <div class="flex items-center gap-6 pt-5 border-t border-slate-200/80 text-xs text-slate-500 font-mono">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 font-bold"></i>
+            <span class="font-bold text-slate-800">0.001mm</span> 공차 정밀도
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 font-bold"></i>
+            <span class="font-bold text-slate-800">KIBO</span> 벤처인증
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-600 font-bold"></i>
+            <span class="font-bold text-slate-800">특허 0389579호</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: 100% Visible 3D Spline Robot / Scene (col-span-6) -->
+      <div class="lg:col-span-6 h-[500px] sm:h-[600px] lg:h-[720px] w-full flex items-center justify-center relative pointer-events-auto">
+        <spline-viewer
+          url="https://prod.spline.design/NKlfG2UXRY5aonrp/scene.splinecode"
+          class="w-full h-full block transform scale-110 sm:scale-120 transition-transform duration-500"
+          tabindex="-1"
+        ></spline-viewer>
+      </div>
+
+    </div>
+
+    <!-- Soft Bottom Ambient Gradient Blend -->
+    <div class="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-slate-50 via-slate-50/60 to-transparent pointer-events-none z-20"></div>
+  </section>
+
+  <!-- ==================== 3. TRUST & CERTIFICATION MARQUEE ==================== -->
+  <section class="trust-marquee-section py-8 border-y border-slate-200/80 bg-white/70 backdrop-blur-md relative overflow-hidden">
+    <div class="container max-w-6xl mx-auto px-4">
+      <p class="text-center text-[11px] font-mono uppercase tracking-[0.2em] text-slate-400 mb-5 font-bold">
+        Certified Quality Standards & Patents
+      </p>
+      <div class="marquee-track flex items-center justify-around gap-8 flex-wrap">
+        <div class="flex items-center gap-2 font-display text-sm font-bold text-slate-700">
+          <i data-lucide="shield-check" class="w-4 h-4 text-indigo-600"></i> KIBO 기술보증 벤처인증
+        </div>
+        <div class="flex items-center gap-2 font-display text-sm font-bold text-slate-700">
+          <i data-lucide="award" class="w-4 h-4 text-indigo-600"></i> 특허 제 0389579호 (분사식 나염기)
+        </div>
+        <div class="flex items-center gap-2 font-display text-sm font-bold text-slate-700">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-600"></i> 0.001mm 초정밀 공차 관리
+        </div>
+        <div class="flex items-center gap-2 font-display text-sm font-bold text-slate-700">
+          <i data-lucide="refresh-cw" class="w-4 h-4 text-indigo-600"></i> 동적 밸런싱(Dynamic Balancing)
+        </div>
+        <div class="flex items-center gap-2 font-display text-sm font-bold text-slate-700">
+          <i data-lucide="sparkles" class="w-4 h-4 text-indigo-600"></i> Super-Finishing 경면 연마
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. PRODUCTION METRIC & VIDEO SHOWCASE ==================== -->
+  <section class="metric-showcase-section py-24 px-4 relative">
+    <div class="container max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-950 mb-4">
+        We help industries build & operate <br />
+        <span class="text-gradient">high-precision rotating systems.</span>
+      </h2>
+      <p class="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto mb-12">
+        설비 다운타임을 최소화하고 공정 효율을 극대화하는 맞춤형 롤 솔루션을 제공합니다.
+      </p>
+
+      <!-- Dual-Mode Real Industrial Manufacturing Video & Process Showcase -->
+      <div class="video-mockup-frame max-w-4xl mx-auto rounded-3xl overflow-hidden border border-slate-200 bg-white p-2.5 relative shadow-2xl">
+        
+        <!-- Video Header Mode Switcher -->
+        <div class="flex items-center justify-between px-3 py-2 bg-slate-900 rounded-t-2xl border-b border-slate-800 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span class="font-mono text-[11px] font-bold text-slate-300 uppercase">SEUNGJI PRECISION MANUFACTURING 4K</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button id="btnModeSteps" class="px-3 py-1 rounded-full text-[10px] font-mono font-bold transition-all bg-indigo-600 text-white shadow-sm flex items-center gap-1">
+              <i data-lucide="layers" class="w-3 h-3"></i>
+              <span>5단계 공정 탐색기 (Steps)</span>
+            </button>
+            <button id="btnModeVideo" class="px-3 py-1 rounded-full text-[10px] font-mono font-bold transition-all bg-slate-800 text-slate-400 hover:text-white flex items-center gap-1">
+              <i data-lucide="video" class="w-3 h-3"></i>
+              <span>실제 가공 영상 (준비중)</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="videoDisplayStage" class="relative w-full aspect-video rounded-b-2xl overflow-hidden bg-slate-950 flex items-center justify-center">
+          
+          <!-- Mode 1: Real Industrial Machining Video Placeholder (준비 중입니다) -->
+          <div id="realVideoFrame" class="absolute inset-0 w-full h-full z-10 hidden flex flex-col items-center justify-center p-6 text-center bg-radial from-slate-900 to-slate-950 select-none">
+            <div class="ambient-glow center-glow opacity-30"></div>
+            
+            <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-4 shadow-glow relative z-10">
+              <i data-lucide="clapperboard" class="w-8 h-8 animate-pulse"></i>
+            </div>
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-indigo-300 text-[10px] font-mono font-bold uppercase tracking-wider mb-3 relative z-10">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+              COMING SOON • 4K UHD FOOTAGE
+            </div>
+            
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white mb-2 relative z-10">
+              실제 가공 영상 준비 중입니다
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-slate-400 max-w-md mx-auto mb-6 leading-relaxed relative z-10">
+              승지정밀산업롤 공장의 초정밀 대형선반 8M 가공 및 슈퍼피니싱 경면 연삭 4K 공식 영상이 곧 공개됩니다.
+            </p>
+
+            <button id="btnSwitchToSteps" class="btn-hero-primary px-5 py-2.5 rounded-full text-xs font-bold text-white flex items-center gap-2 relative z-10 border border-white/20 shadow-lg hover:scale-105 transition-transform">
+              <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-400"></i>
+              <span>5단계 공정 탐색기로 보기</span>
+            </button>
+          </div>
+
+          <!-- Mode 2: 5-Stage Interactive Manufacturing Process Explorer (Default Active) -->
+          <div id="processVideoPlayer" class="absolute inset-0 w-full h-full z-10 block cursor-pointer select-none">
+            <!-- Slide 1: Core Machining & Lathe -->
+            <div class="process-slide absolute inset-0 opacity-100 transition-opacity duration-700 active" data-step="0">
+              <img src="assets/bearing_assembly.jpg" onerror="this.src='../.user_uploaded/media_1787580819107.jpg'" alt="대형 선삭 및 코어 가공" class="w-full h-full object-cover opacity-90 scale-105 transition-transform duration-[4000ms]" />
+            </div>
+            <!-- Slide 2: Rubber & Urethane Coating -->
+            <div class="process-slide absolute inset-0 opacity-0 transition-opacity duration-700" data-step="1">
+              <img src="assets/rubber_urethane_rolls.png" onerror="this.src='../.user_uploaded/media_1787580819082.png'" alt="고무 우레탄 피복 연마" class="w-full h-full object-cover opacity-90 scale-105 transition-transform duration-[4000ms]" />
+            </div>
+            <!-- Slide 3: Hard Chrome & Super-Finishing -->
+            <div class="process-slide absolute inset-0 opacity-0 transition-opacity duration-700" data-step="2">
+              <img src="assets/super_finishing_mirror.jpg" onerror="this.src='../.user_uploaded/media_1787580819126.jpg'" alt="경질 크롬 도금 및 슈퍼피니싱 연마" class="w-full h-full object-cover opacity-90 scale-105 transition-transform duration-[4000ms]" />
+            </div>
+            <!-- Slide 4: Dynamic Balancing & Laser Inspection -->
+            <div class="process-slide absolute inset-0 opacity-0 transition-opacity duration-700" data-step="3">
+              <img src="assets/inspection_balance.jpg" onerror="this.src='../.user_uploaded/media_1787580818975.jpg'" alt="동적 바란싱 및 0.001mm 검사" class="w-full h-full object-cover opacity-90 scale-105 transition-transform duration-[4000ms]" />
+            </div>
+            <!-- Slide 5: Industrial Machinery Assembly & Deployment -->
+            <div class="process-slide absolute inset-0 opacity-0 transition-opacity duration-700" data-step="4">
+              <img src="assets/machinery_line.jpg" onerror="this.src='../.user_uploaded/media_1787580819084.jpg'" alt="라인 조립 및 최종 출고" class="w-full h-full object-cover opacity-90 scale-105 transition-transform duration-[4000ms]" />
+            </div>
+
+            <!-- Top Progress Segments (5-Step Video Timeline) -->
+            <div class="absolute top-4 left-6 right-6 z-30 pointer-events-auto flex items-center gap-2">
+              <div class="progress-bar-segment flex-1 h-1.5 rounded-full bg-white/20 overflow-hidden cursor-pointer" data-target="0"><div class="segment-fill h-full bg-indigo-400 w-0"></div></div>
+              <div class="progress-bar-segment flex-1 h-1.5 rounded-full bg-white/20 overflow-hidden cursor-pointer" data-target="1"><div class="segment-fill h-full bg-indigo-400 w-0"></div></div>
+              <div class="progress-bar-segment flex-1 h-1.5 rounded-full bg-white/20 overflow-hidden cursor-pointer" data-target="2"><div class="segment-fill h-full bg-indigo-400 w-0"></div></div>
+              <div class="progress-bar-segment flex-1 h-1.5 rounded-full bg-white/20 overflow-hidden cursor-pointer" data-target="3"><div class="segment-fill h-full bg-indigo-400 w-0"></div></div>
+              <div class="progress-bar-segment flex-1 h-1.5 rounded-full bg-white/20 overflow-hidden cursor-pointer" data-target="4"><div class="segment-fill h-full bg-indigo-400 w-0"></div></div>
+            </div>
+
+            <!-- Bottom HUD: Dynamic Process Description & Step Selector -->
+            <div class="absolute bottom-4 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3 z-20 pointer-events-none">
+              <div class="text-left">
+                <span id="processSubtitle" class="text-[10px] font-mono font-bold tracking-widest text-indigo-400 uppercase block mb-1">
+                  01. 대형 선반 가공 및 롤 코어 저널 정밀 절삭
+                </span>
+                <p id="processHeading" class="text-sm sm:text-base font-extrabold text-white">
+                  최대 8M 대형선반을 활용하여 0.005mm 이내 공차로 롤 바디와 저널부를 1차 정밀 가공합니다.
+                </p>
+              </div>
+
+              <!-- Step Quick Switch Pills -->
+              <div class="flex items-center gap-1.5 pointer-events-auto">
+                <button class="step-pill px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold border transition-all active-step-pill bg-indigo-600 text-white border-indigo-400" data-jump="0">01 선삭</button>
+                <button class="step-pill px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold border transition-all bg-black/60 text-slate-400 border-white/10 hover:text-white" data-jump="1">02 피복</button>
+                <button class="step-pill px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold border transition-all bg-black/60 text-slate-400 border-white/10 hover:text-white" data-jump="2">03 크롬연마</button>
+                <button class="step-pill px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold border transition-all bg-black/60 text-slate-400 border-white/10 hover:text-white" data-jump="3">04 바란싱</button>
+                <button class="step-pill px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold border transition-all bg-black/60 text-slate-400 border-white/10 hover:text-white" data-jump="4">05 조립출고</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. WHY CHOOSE US (3 GLOSSY OBSIDIAN CARDS - PDF FIDELITY) ==================== -->
+  <section id="why-us" class="why-us-section py-24 px-4 relative">
+    <div class="container max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-kicker">WHY CHOOSE US</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mt-2">
+          30년 노하우가 만드는 <span class="text-gradient">확실한 차이</span>
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-3">
+          단순 가공을 넘어, 완제품의 내구성과 구동 밸런스를 끝까지 책임지는 제조 파트너입니다.
+        </p>
+      </div>
+
+      <!-- 3-Card Grid (Glossy Obsidian Contrast with 3D Gyro Tilt & Mouse Spotlight) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="card-dark-glossy spotlight-card group p-8 rounded-3xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden cursor-pointer" data-tilt data-tilt-max="7" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="card-glow"></div>
+          <div class="spotlight-layer"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-indigo-400 mb-6 shadow-inner group-hover:scale-110 transition-transform">
+              <i data-lucide="cpu" class="w-7 h-7"></i>
+            </div>
+            <span class="badge-pill-dark mb-3">01 / STRATEGY</span>
+            <h3 class="text-lg font-extrabold text-white mt-1 mb-3">도면 및 용도 맞춤 설계</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              사용 환경(작업 온도, 압력, 마찰 계수)을 분석하여 최적의 소재(스틸, 스테인리스, 특수합금)와 구조를 제안합니다.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-semibold text-zinc-500 group-hover:text-zinc-300 relative z-10">
+            <span>맞춤 공정 컨설팅</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-indigo-400"></i>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-dark-glossy spotlight-card group p-8 rounded-3xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden cursor-pointer" data-tilt data-tilt-max="7" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="card-glow"></div>
+          <div class="spotlight-layer"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-indigo-400 mb-6 shadow-inner group-hover:scale-110 transition-transform">
+              <i data-lucide="layers" class="w-7 h-7"></i>
+            </div>
+            <span class="badge-pill-dark mb-3">02 / END-TO-END</span>
+            <h3 class="text-lg font-extrabold text-white mt-1 mb-3">원스톱 일괄 가공 시스템</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              원자재 선삭부터 외경 연마, 크롬 도금, 우레탄 피복, 동적 밸런싱까지 외주 없이 공장 내에서 원스톱으로 처리합니다.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-semibold text-zinc-500 group-hover:text-zinc-300 relative z-10">
+            <span>납기 단축 & 비용 절감</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-indigo-400"></i>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-dark-glossy spotlight-card group p-8 rounded-3xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden cursor-pointer" data-tilt data-tilt-max="7" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="card-glow"></div>
+          <div class="spotlight-layer"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-indigo-400 mb-6 shadow-inner group-hover:scale-110 transition-transform">
+              <i data-lucide="sparkles" class="w-7 h-7"></i>
+            </div>
+            <span class="badge-pill-dark mb-3">03 / PRECISION</span>
+            <h3 class="text-lg font-extrabold text-white mt-1 mb-3">초정밀 품질 보증</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              0.001mm 단위 공차 측정 장비와 고속 회전 바란스 시험을 거쳐 완벽하게 검증된 제품만을 고객사에 출고합니다.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-semibold text-zinc-500 group-hover:text-zinc-300 relative z-10">
+            <span>품질 성적서 및 사후 관리</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-indigo-400"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. OUR SERVICES (BENTO GRID - LIGHT LUXURY) ==================== -->
+  <section id="services" class="services-bento-section py-24 px-4 relative">
+    <div class="container max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-kicker">OUR CAPABILITIES</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mt-2">
+          승지정밀산업롤의 <span class="text-gradient">핵심 사업분야</span>
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-3">
+          산업 현장의 모든 회전 롤 및 기계 부품에 최적화된 제조 공정을 제공합니다.
+        </p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+        
+        <!-- Bento 1 (Large 8-col) -->
+        <div class="md:col-span-8 p-8 rounded-3xl card-light relative overflow-hidden flex flex-col justify-between group">
+          <div class="flex flex-col lg:flex-row gap-6 items-start">
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-4">
+                <span class="badge-pill-light">01 / ROLL MANUFACTURING</span>
+                <span class="text-[11px] font-mono text-slate-400 font-bold">MAX Ø1200 × 8000L</span>
+              </div>
+              <h3 class="text-2xl font-extrabold text-slate-900 mb-2">냉각 · 히팅 · 엠보싱 · 조각 Roll 신규 제작</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xl mb-6">
+                정밀 자켓형 냉각롤, 스팀 및 오일 순환 히팅롤, 미세 패턴 엠보싱롤 및 조각롤을 도면 기준으로 정밀 가공합니다.
+              </p>
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="spec-tag">이중 자켓 구조</span>
+                <span class="spec-tag">정밀 온도 균일도</span>
+                <span class="spec-tag">특수 패턴 조각</span>
+              </div>
+            </div>
+            <div class="w-full lg:w-48 aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 shrink-0 shadow-sm">
+              <img src="assets/thermal_cooling_roll.jpg" onerror="this.src='../thermal_cooling_roll_1787573749133.jpg'" alt="냉각 히팅 롤 가공" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento 2 (Small 4-col) -->
+        <div class="md:col-span-4 p-8 rounded-3xl card-light relative overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill-light">02 / COATING & GRINDING</span>
+            </div>
+            <div class="w-full h-32 rounded-xl overflow-hidden border border-slate-200 mb-4 shadow-sm">
+              <img src="assets/rubber_urethane_rolls.png" onerror="this.src='../.user_uploaded/media_1787580819082.png'" alt="고무 및 우레탄 피복 롤" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900 mb-1">고무 및 우레탄 피복 연마</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              내마모성, 내약품성 우레탄 및 특수 고무 라이닝 피복 후 고정밀 외경 연마 마감.
+            </p>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-xs font-bold text-indigo-600">
+            <span>재피복 및 단독 연마 가능</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Bento 3 (Small 4-col) -->
+        <div class="md:col-span-4 p-8 rounded-3xl card-light relative overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill-light">03 / SURFACE FINISHING</span>
+            </div>
+            <div class="w-full h-32 rounded-xl overflow-hidden border border-slate-200 mb-4 shadow-sm">
+              <img src="assets/super_finishing_mirror.jpg" onerror="this.src='../.user_uploaded/media_1787580819126.jpg'" alt="경질 크롬 도금 슈퍼피니싱" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900 mb-1">경질 크롬 도금 & Super Finishing</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              경도 HV800 이상 크롬 도금과 Ra 0.02 이하의 초정밀 슈퍼피니싱 무광/경면 마감.
+            </p>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-xs font-bold text-indigo-600">
+            <span>내식성 및 내마모성 극대화</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Bento 4 (Small 4-col) -->
+        <div class="md:col-span-4 p-8 rounded-3xl card-light relative overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill-light">04 / SPECIALTY COATING</span>
+            </div>
+            <div class="w-full h-32 rounded-xl overflow-hidden border border-slate-200 mb-4 shadow-sm">
+              <img src="assets/bearing_assembly.jpg" onerror="this.src='../.user_uploaded/media_1787580819107.jpg'" alt="RTV 테프론 코팅 및 정밀 조립" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900 mb-1">RTV · 테프론(PTFE) 특수 코팅</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              비점착성(Non-stick) 및 고온 내구성을 위한 RTV 실리콘 및 테프론 특수 표면처리.
+            </p>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-xs font-bold text-indigo-600">
+            <span>고온 비점착성 이형 롤</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+        <!-- Bento 5 (Small 4-col) -->
+        <div class="md:col-span-4 p-8 rounded-3xl card-light relative overflow-hidden flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-pill-light">05 / MACHINERY & DYEING</span>
+            </div>
+            <div class="w-full h-32 rounded-xl overflow-hidden border border-slate-200 mb-4 shadow-sm">
+              <img src="assets/spray_dyeing_machine.jpg" onerror="this.src='../korean_spray_dyeing_1787573925744.jpg'" alt="분사식 나염기 특허 제0389579호" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900 mb-1">산업기계 & 분사식 나염기 제작</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              특허 제 0389579호 보유. 롤 구동 산업기계 및 고정밀 분사식 나염기 제작·수리.
+            </p>
+          </div>
+          <div class="mt-4 flex items-center justify-between text-xs font-bold text-indigo-600">
+            <span>특허 등록 기술력</span>
+            <i data-lucide="check" class="w-4 h-4"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. HOW WE WORK (PIPELINE STEPPER) ==================== -->
+  <section id="how-we-work" class="pipeline-section py-24 px-4 relative">
+    <div class="container max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-kicker">PRECISION PROCESS</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mt-2">
+          체계적인 <span class="text-gradient">6단계 제작 프로세스</span>
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-3">
+          도면 접수부터 현장 납품까지 빈틈없는 품질 관리 파이프라인으로 납기를 준수합니다.
+        </p>
+      </div>
+
+      <!-- 6-Step Node List -->
+      <div class="relative max-w-3xl mx-auto space-y-5">
+        <!-- Connecting Line -->
+        <div class="absolute top-8 bottom-8 left-[23px] sm:left-[27px] w-[2px] bg-gradient-to-b from-indigo-600 via-indigo-300 to-slate-200 -z-0"></div>
+
+        <!-- Step 1 -->
+        <div class="relative flex items-start gap-4 sm:gap-6 card-light p-6 rounded-2xl transition-colors z-10">
+          <div class="w-12 h-12 rounded-xl bg-slate-950 text-white flex items-center justify-center font-black font-display text-sm shrink-0 shadow-sm">
+            01
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Discovery & Audit (도면 및 사용조건 정밀 분석)</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              고객사의 가공 도면, 운전 속도(RPM), 사용 온도 및 압력을 검토하여 최적의 소재와 가공 방식을 도출합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative flex items-start gap-4 sm:gap-6 card-light p-6 rounded-2xl transition-colors z-10">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center font-black font-display text-sm shrink-0">
+            02
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Fabrication Blueprint (공정 수립 및 자재 발주)</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              정밀 선삭, 열처리, 연마, 도금 등 단계별 일정과 허용 공차 기준을 확정합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative flex items-start gap-4 sm:gap-6 card-light p-6 rounded-2xl transition-colors z-10">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center font-black font-display text-sm shrink-0">
+            03
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Build & Machining (대형 선반 및 CNC 가공)</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              보유 중인 8M 대형선반 및 정밀 선삭 설비를 활용하여 롤 코어와 저널부를 1차 정밀 가공합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative flex items-start gap-4 sm:gap-6 card-light p-6 rounded-2xl transition-colors z-10">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center font-black font-display text-sm shrink-0">
+            04
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Coating & Super-Finishing (피복, 도금 및 경면 연마)</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              용도에 맞게 고무/우레탄 라이닝, 경질 크롬 도금 또는 테프론 코팅 후 미크론 단위 초정밀 표면 마감을 진행합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="relative flex items-start gap-4 sm:gap-6 card-light p-6 rounded-2xl transition-colors z-10">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-700 border border-indigo-200 flex items-center justify-center font-black font-display text-sm shrink-0">
+            05
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Testing & Dynamic Balance (동적 밸런싱 & 품질 검사)</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              고속 회전 동적 바란스 시험기를 통해 진동을 제로화하고 외경 진원도 및 조도를 전수 검사합니다.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="relative flex items-start gap-4 sm:gap-6 card-light p-6 rounded-2xl transition-colors z-10">
+          <div class="w-12 h-12 rounded-xl bg-slate-950 text-white flex items-center justify-center font-black font-display text-sm shrink-0 shadow-sm">
+            06
+          </div>
+          <div>
+            <h4 class="text-base font-extrabold text-slate-900">Deployment & Maintenance (현장 출고 및 사후 보증)</h4>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              안전 포장 후 지정 장소로 출고하며, 장기 사용 후 표면 재연마 및 재생 서비스까지 원스톱 지원합니다.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. WHAT WE'VE BUILT (CASE STUDIES - OBSIDIAN CONTRAST) ==================== -->
+  <section id="case-study" class="case-study-section py-24 px-4 relative">
+    <div class="container max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-kicker">CASE STUDIES</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mt-2">
+          실제 납품 사례 & <span class="text-gradient">측정 지표</span>
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-3">
+          대형 제지, 필름, 2차전지, 섬유 및 인쇄 라인에 공급된 승지정밀산업롤의 성과입니다.
+        </p>
+      </div>
+
+      <!-- Deep Obsidian Case Card -->
+      <div class="p-8 sm:p-12 rounded-3xl card-dark-glossy relative overflow-hidden flex flex-col md:flex-row items-center gap-8 shadow-2xl">
+        <!-- 3D visual preview box -->
+        <div class="w-full md:w-1/2 aspect-square rounded-2xl bg-zinc-950 border border-zinc-800 p-2 flex flex-col items-center justify-center relative group overflow-hidden">
+          <img src="assets/machinery_line.jpg" onerror="this.src='../.user_uploaded/media_1787580819084.jpg'" alt="초대형 정밀 롤 라인" class="w-full h-full object-cover rounded-xl opacity-85 group-hover:scale-105 transition-transform duration-500" />
+          <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-black/75 backdrop-blur-md border border-white/10 text-xs text-white">
+            <span class="font-bold text-indigo-400">초고속 광폭 필름 연신 롤 라인 (Ø800 × 5500L)</span>
+            <p class="text-[10px] text-zinc-400">0.001mm 미크론 공차 & 동적 바란싱 완료</p>
+          </div>
+        </div>
+
+        <!-- Copy & Metrics -->
+        <div class="w-full md:w-1/2 flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[11px] font-bold mb-4">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 납품 완료 성공 사례
+            </div>
+            <h3 class="text-2xl font-extrabold text-white mb-3">고속 광폭 필름용 초정밀 경질 크롬 냉각롤</h3>
+            <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed mb-8">
+              기존 수입 롤의 런아웃 오차를 0.002mm 이내로 완벽히 국산화 대체하여, 라인 가동 속도를 35% 향상시키고 결함률을 획기적으로 낮췄습니다.
+            </p>
+          </div>
+
+          <!-- 3 Stats Counters -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-zinc-800 text-center">
+            <div>
+              <div class="text-2xl sm:text-3xl font-black font-display text-white">0.001<span class="text-indigo-400 text-sm font-sans">mm</span></div>
+              <span class="text-[10px] font-mono text-zinc-500 uppercase">공차 정밀도</span>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black font-display text-white">+40<span class="text-indigo-400 text-sm font-sans">%</span></div>
+              <span class="text-[10px] font-mono text-zinc-500 uppercase">내구성 수명</span>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-black font-display text-white">24/7</div>
+              <span class="text-[10px] font-mono text-zinc-500 uppercase">긴급 AS 지원</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. MACHINERY & TECH ECOSYSTEM ==================== -->
+  <section id="ecosystem" class="ecosystem-section py-24 px-4 relative">
+    <div class="container max-w-5xl mx-auto text-center">
+      <span class="section-kicker">MACHINERY ECOSYSTEM</span>
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mt-2 mb-4">
+        보유 설비 인프라 & <span class="text-gradient">가공 역량</span>
+      </h2>
+      <p class="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto mb-16">
+        대형 선반부터 원통 연마기, 크롬 도금조, 동적 바란스기까지 핵심 설비를 자체 보유하고 있습니다.
+      </p>
+
+      <!-- Grid of 4 Equipments -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="p-6 rounded-2xl card-light text-left transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 flex items-center justify-center mb-4">
+              <i data-lucide="wrench" class="w-5 h-5"></i>
+            </div>
+            <h4 class="text-sm font-bold text-slate-900 mb-1">8M 초대형 선반</h4>
+            <p class="text-[11px] text-slate-600 leading-relaxed mb-4">최대 직경 Ø1200mm, 길이 8000mm까지 초대형 샤프트 및 롤 정밀 선삭 가공.</p>
+          </div>
+          <div class="w-full h-24 rounded-xl overflow-hidden border border-slate-200">
+            <img src="assets/bearing_assembly.jpg" onerror="this.src='../.user_uploaded/media_1787580819107.jpg'" alt="대형 선반 가공" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl card-light text-left transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 flex items-center justify-center mb-4">
+              <i data-lucide="disc" class="w-5 h-5"></i>
+            </div>
+            <h4 class="text-sm font-bold text-slate-900 mb-1">원통 정밀 연마기</h4>
+            <p class="text-[11px] text-slate-600 leading-relaxed mb-4">고무, 우레탄, 스틸 외경을 0.001mm 미크론 공차로 초정밀 원통 연삭.</p>
+          </div>
+          <div class="w-full h-24 rounded-xl overflow-hidden border border-slate-200">
+            <img src="assets/super_finishing_mirror.jpg" onerror="this.src='../.user_uploaded/media_1787580819126.jpg'" alt="원통 연마기" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl card-light text-left transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 flex items-center justify-center mb-4">
+              <i data-lucide="shield" class="w-5 h-5"></i>
+            </div>
+            <h4 class="text-sm font-bold text-slate-900 mb-1">경질 크롬 도금 설비</h4>
+            <p class="text-[11px] text-slate-600 leading-relaxed mb-4">고경도 전해 크롬 도금조 및 열풍 건조 라인으로 균일한 도금 두께 보증.</p>
+          </div>
+          <div class="w-full h-24 rounded-xl overflow-hidden border border-slate-200">
+            <img src="assets/chrome_plating_tanks.jpg" onerror="this.src='../korean_chrome_plating_1787573902693.jpg'" alt="크롬 도금 설비" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl card-light text-left transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-700 flex items-center justify-center mb-4">
+              <i data-lucide="activity" class="w-5 h-5"></i>
+            </div>
+            <h4 class="text-sm font-bold text-slate-900 mb-1">동적 바란스 머시인</h4>
+            <p class="text-[11px] text-slate-600 leading-relaxed mb-4">고속 회전 시 진동과 쏠림을 완벽 제거하는 Dynamic Balancing 전수 검증.</p>
+          </div>
+          <div class="w-full h-24 rounded-xl overflow-hidden border border-slate-200">
+            <img src="assets/dynamic_balancing_rig.jpg" onerror="this.src='../korean_dynamic_balance_1787573880779.jpg'" alt="동적 바란스 머시인" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 10. CLIENT REVIEWS (TESTIMONIALS) ==================== -->
+  <section id="reviews" class="reviews-section py-24 px-4 relative">
+    <div class="container max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-kicker">WHAT THEY'RE SAYING</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mt-2">
+          고객사들이 전하는 <span class="text-gradient">신뢰의 평가</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl card-light flex flex-col justify-between">
+          <p class="text-xs text-slate-700 leading-relaxed italic mb-6">
+            "기존 수입산 롤 대비 납기가 3주 이상 단축되었고, 0.002mm 수준의 정밀한 진원도로 라인 진동이 완전히 사라졌습니다."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+            <div class="w-9 h-9 rounded-full bg-slate-900 flex items-center justify-center text-xs font-bold text-white font-display">K</div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">김*진 기술이사</div>
+              <div class="text-[10px] text-slate-500">대형 광학필름 제조사</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl card-light flex flex-col justify-between">
+          <p class="text-xs text-slate-700 leading-relaxed italic mb-6">
+            "우레탄 피복 연마와 크롬 도금을 한 공장에서 원스톱으로 처리해주셔서 품질 균일도와 사후 관리가 정말 편해졌습니다."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+            <div class="w-9 h-9 rounded-full bg-slate-900 flex items-center justify-center text-xs font-bold text-white font-display">P</div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">박*수 공장장</div>
+              <div class="text-[10px] text-slate-500">2차전지 분리막 코팅업체</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl card-light flex flex-col justify-between">
+          <p class="text-xs text-slate-700 leading-relaxed italic mb-6">
+            "야간 긴급 롤 파손 시에도 즉시 대응해주셔서 공장 가동 중단을 막을 수 있었습니다. 기술력과 신뢰 모두 최고입니다."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+            <div class="w-9 h-9 rounded-full bg-slate-900 flex items-center justify-center text-xs font-bold text-white font-display">L</div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">이*현 생산총괄</div>
+              <div class="text-[10px] text-slate-500">섬유 나염 및 가공 설비사</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 11. PRODUCTION & QUOTATION PACKAGES ==================== -->
+  <section id="pricing" class="pricing-section py-24 px-4 relative">
+    <div class="container max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-kicker">BUILT FOR EVERY STAGE</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mt-2">
+          공정 목적에 맞춘 <span class="text-gradient">주문 제작 가이드</span>
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-3">
+          도면 및 작업 환경 기준 맞춤 견적을 당일 신속하게 안내해 드립니다.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Package 1 (Light Card) -->
+        <div class="p-8 rounded-3xl card-light flex flex-col justify-between relative group">
+          <div>
+            <span class="badge-pill-light mb-3">STANDARD / 신규 제작</span>
+            <h3 class="text-2xl font-extrabold text-slate-950 mt-1 mb-2">신규 산업용 Roll 제작</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              원자재 발주부터 선삭, 연마, 도금, 바란싱까지 도면 사양 기준 100% 맞춤 일괄 가공.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-600"></i> 도면 기준 3D/2D 가공 검토</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-600"></i> 0.001mm 미크론 공차 관리</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-600"></i> 동적 밸런스 검사 성적서 발급</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-600"></i> 현장 안전 배송 및 납품</li>
+            </ul>
+          </div>
+          <a href="#contact" class="mt-8 btn-hero-secondary w-full py-3 rounded-full text-center text-xs font-bold block">
+            신규 제작 견적 요청
+          </a>
+        </div>
+
+        <!-- Package 2 (Obsidian Dark Recommended Card) -->
+        <div class="p-8 rounded-3xl card-dark-glossy flex flex-col justify-between relative group shadow-2xl">
+          <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-indigo-600 text-[10px] font-extrabold text-white uppercase tracking-wider shadow-sm">
+            RECOMMENDED
+          </div>
+          <div>
+            <span class="badge-pill-dark mb-3">REPAIR & RE-GRINDING / 재생</span>
+            <h3 class="text-2xl font-extrabold text-white mt-1 mb-2">표면 재생 · 재연마 & 피복</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+              기존 코어 재활용을 통한 원가 절감. 우레탄 재피복, 크롬 재도금 및 정밀 재연마.
+            </p>
+            <ul class="space-y-2.5 text-xs text-zinc-300">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-400"></i> 기존 코어 정밀 크랙/휨 검사</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-400"></i> 우레탄/고무 박리 및 재피복</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-400"></i> 크롬 박리 후 재도금 및 슈퍼피니싱</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-indigo-400"></i> 신품 대비 최대 60% 비용 절감</li>
+            </ul>
+          </div>
+          <a href="#contact" class="mt-8 btn-hero-primary w-full py-3 rounded-full text-center text-xs font-bold text-white block">
+            재생 & 재연마 상담
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 12. FREQUENTLY ASKED QUESTIONS (SHADCN ACCORDION) ==================== -->
+  <section id="faq" class="faq-section py-24 px-4 relative">
+    <div class="container max-w-4xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-kicker">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mt-2">
+          자주 묻는 <span class="text-gradient">질문과 답변</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item card-light rounded-2xl overflow-hidden transition-all">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 text-sm sm:text-base hover:text-indigo-600 transition-colors">
+            <span>Q. 최대 가공 가능한 롤의 직경(Ø)과 길이(L)는 얼마인가요?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed hidden">
+            승지정밀은 <strong>최대 직경 Ø1,200mm, 길이 8,000mm(8M)</strong>까지 초대형 선반 및 정밀 원통 연마 설비를 자체 보유하고 있어, 소형 롤부터 초대형 제지/필름 롤까지 원스톱으로 가공 가능합니다.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item card-light rounded-2xl overflow-hidden transition-all">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 text-sm sm:text-base hover:text-indigo-600 transition-colors">
+            <span>Q. 기존 사용 중이던 롤의 표면 재생 및 재연마도 가능한가요?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed hidden">
+            네, 가능합니다. 기존 코어의 휨과 크랙을 정밀 검사한 뒤, 기존 우레탄/크롬층을 박리하고 신품 수준의 경도와 공차로 <strong>우레탄 재피복, 경질 크롬 재도금 및 슈퍼피니싱 연마</strong>를 진행하여 신품 대비 최대 60% 비용을 절감해 드립니다.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item card-light rounded-2xl overflow-hidden transition-all">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 text-sm sm:text-base hover:text-indigo-600 transition-colors">
+            <span>Q. 긴급 납기나 야간 파손 수리 지원이 가능한가요?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed hidden">
+            승지정밀은 고객사의 라인 다운타임을 최소화하기 위해 <strong>24/7 긴급 가공 대응팀</strong>을 운영하고 있습니다. 사전 유선 연락(`010-8735-7420`) 후 입고 시 최우선 공정으로 긴급 가공하여 신속 납품해 드립니다.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item card-light rounded-2xl overflow-hidden transition-all">
+          <button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-bold text-slate-900 text-sm sm:text-base hover:text-indigo-600 transition-colors">
+            <span>Q. 견적 문의 시 어떤 자료를 전달드리면 되나요?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed hidden">
+            2D/3D 가공 도면(CAD 파일 또는 PDF)이나 현품 사진, 주요 사양(외경, 길이, 사용 온도, 피복/도금 두께)을 이메일(`sjcompany@seungji.co.kr`)이나 팩스로 접수해 주시면 당일 즉시 상세 견적서를 발송해 드립니다.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 13. BOTTOM CTA BANNER (OBSIDIAN GLOW PILL - PDF FIDELITY) ==================== -->
+  <section id="contact" class="contact-cta-section py-24 px-4 relative overflow-hidden">
+    <div class="container max-w-4xl mx-auto text-center relative z-10">
+      
+      <!-- CTA Pill Frame -->
+      <div class="p-8 sm:p-14 rounded-3xl card-dark-glossy border border-slate-700/80 shadow-2xl relative overflow-hidden" data-tilt data-tilt-max="5">
+        <div class="ambient-glow center-glow opacity-30"></div>
+        
+        <div class="w-14 h-14 rounded-full bg-indigo-500/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 mx-auto mb-6 shadow-glow">
+          <i data-lucide="phone-call" class="w-6 h-6"></i>
+        </div>
+
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+          정밀 롤 제작 및 가공 상담이 필요하신가요?
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-300 max-w-lg mx-auto mb-8 leading-relaxed">
+          도면이나 사진을 보내주시면 기술 담당자가 즉시 확인 후 최적의 공정과 견적을 안내해 드립니다.
+        </p>
+
+        <!-- Direct Phone Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="tel:010-8735-7420" class="btn-pill-primary px-8 py-3.5 rounded-full text-sm font-bold text-white flex items-center gap-2 shadow-xl hover:scale-105 active:scale-95 transition-transform">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>010-8735-7420 (대표 직통)</span>
+          </a>
+          <button id="btnOpenModal" class="btn-hero-secondary px-6 py-3.5 rounded-full text-sm font-bold text-slate-900 border border-slate-700 bg-white/90 backdrop-blur-md hover:bg-white transition-all flex items-center gap-2">
+            <i data-lucide="calculator" class="w-4 h-4 text-indigo-600"></i>
+            <span>온라인 견적 시뮬레이터</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MODAL: QUICK QUOTE ESTIMATION CALCULATOR ==================== -->
+  <div id="quoteModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="modal-card bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl border border-slate-200 relative transform scale-95 transition-transform duration-300">
+      
+      <!-- Close Button -->
+      <button id="btnCloseModal" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="text-left mb-6">
+        <span class="badge-pill-light mb-2">QUICK ESTIMATION</span>
+        <h3 class="text-xl font-extrabold text-slate-950">온라인 맞춤 롤 가공 견적 계산기</h3>
+        <p class="text-xs text-slate-500 mt-1">사양을 선택하시면 예상 공정 및 리드타임이 즉시 산출됩니다.</p>
+      </div>
+
+      <form id="quoteCalculatorForm" class="space-y-4 text-left text-xs">
+        <div>
+          <label class="font-bold text-slate-800 block mb-1.5">1. 제품 구분 및 표면 처리</label>
+          <select id="calcType" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 font-semibold focus:outline-none focus:border-indigo-500">
+            <option value="cooling">냉각 · 히팅 · 엠보싱 롤 (신규 제작)</option>
+            <option value="urethane">고무 / 우레탄 피복 연마</option>
+            <option value="chrome">경질 크롬 도금 & Super Finishing</option>
+            <option value="teflon">RTV · 테프론(PTFE) 특수 코팅</option>
+            <option value="repair">기존 롤 표면 재생 및 재연마</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="font-bold text-slate-800 block mb-1.5">2. 롤 직경 (Ø mm)</label>
+            <input type="number" id="calcDia" value="300" min="50" max="1200" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 font-semibold focus:outline-none focus:border-indigo-500" placeholder="예: 300" />
+          </div>
+          <div>
+            <label class="font-bold text-slate-800 block mb-1.5">3. 롤 전장 (L mm)</label>
+            <input type="number" id="calcLen" value="2500" min="200" max="8000" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 font-semibold focus:outline-none focus:border-indigo-500" placeholder="예: 2500" />
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-indigo-50/80 border border-indigo-100 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-mono text-indigo-600 font-bold block uppercase">ESTIMATED TURNAROUND</span>
+            <span id="calcResultTime" class="text-sm font-extrabold text-indigo-950">표준 3~5 영업일 내 출고</span>
+          </div>
+          <span class="px-2.5 py-1 rounded-full bg-indigo-600 text-white font-mono text-[10px] font-bold">0.001mm 공차 보증</span>
+        </div>
+
+        <div>
+          <label class="font-bold text-slate-800 block mb-1.5">4. 담당자 연락처 (전화번호/성함)</label>
+          <input type="text" id="calcContact" required placeholder="010-XXXX-XXXX / 회사명 홍길동" class="w-full p-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 focus:outline-none focus:border-indigo-500" />
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-full bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition-transform hover:scale-105 active:scale-95">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>상세 견적서 당일 접수 요청</span>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ==================== 14. COMPREHENSIVE COMPANY FOOTER ==================== -->
+  <footer class="site-footer py-14 border-t border-slate-200 bg-white text-slate-500 text-xs">
+    <div class="container max-w-5xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-8 border-b border-slate-200">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-full bg-slate-950 flex items-center justify-center font-display font-black text-xs text-white">
+            SJ
+          </div>
+          <div>
+            <span class="font-extrabold text-sm text-slate-900 tracking-wider">승지정밀산업롤</span>
+            <span class="text-[10px] text-slate-500 font-mono block">SEUNGJI PRECISION INDUSTRIAL ROLL</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex flex-wrap gap-6 text-[11px] font-semibold text-slate-600">
+          <a href="#why-us" class="hover:text-slate-950 transition-colors">기술특장점</a>
+          <a href="#services" class="hover:text-slate-950 transition-colors">사업분야</a>
+          <a href="#how-we-work" class="hover:text-slate-950 transition-colors">공정 프로세스</a>
+          <a href="#ecosystem" class="hover:text-slate-950 transition-colors">보유설비</a>
+          <a href="#contact" class="hover:text-slate-950 transition-colors">견적 문의</a>
+        </div>
+      </div>
+
+      <!-- Company Legal Details -->
+      <div class="pt-8 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-slate-500 leading-relaxed font-normal">
+        <div>
+          <p><strong>상호</strong>: 승지정밀산업롤 | <strong>대표자</strong>: 이병덕 | <strong>경영이념</strong>: 품질 · 신용</p>
+          <p><strong>특허 및 인증</strong>: KIBO 기술보증기금 벤처기업 인증 • 특허 제 0389579호 (분사식 나염기)</p>
+          <p><strong>주요 영업품목</strong>: 냉각·히팅·엠보싱 롤 제작, 고무/우레탄 피복 연마, 경질 크롬 도금 Super-Finishing, RTV/테프론 코팅, 산업기계 수리</p>
+        </div>
+        <div class="md:text-right shrink-0">
+          <p>© 2026 승지정밀산업롤. All rights reserved.</p>
+          <p class="text-[10px] text-slate-400 font-mono">Designed for Next-Gen Industrial Precision</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
